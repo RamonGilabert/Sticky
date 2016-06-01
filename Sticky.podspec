@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Sticky"
-  s.summary          = "A short description of Sticky."
+  s.summary          = "A lot of the cats I grew up with in the South Bronx found themselves in sticky situations."
   s.version          = "0.1.0"
   s.homepage         = "https://github.com/RamonGilabert/Sticky"
   s.license          = 'MIT'
@@ -12,8 +12,6 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/RamonGilabert'
 
   s.ios.deployment_target = '8.0'
-  s.osx.deployment_target = '10.9'
-  s.tvos.deployment_target = '9.2'
 
   s.requires_arc = true
   s.ios.source_files = 'Sources/**/*'
