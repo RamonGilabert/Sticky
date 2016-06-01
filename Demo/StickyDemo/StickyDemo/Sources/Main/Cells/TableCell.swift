@@ -6,12 +6,16 @@ class TableCell: UITableViewCell {
 
   struct Dimensions {
     struct Avatar {
-      static let size: CGFloat = 100
+      static let size: CGFloat = 60
       static let offset: CGFloat = 14
     }
 
     struct Text {
       static let offset: CGFloat = 14
+    }
+
+    struct Separator {
+      static let height: CGFloat = 0.25
     }
   }
 
@@ -26,24 +30,31 @@ class TableCell: UITableViewCell {
 
   lazy var titleLabel: UILabel = {
     let label = UILabel()
-    label.numberOfLines = 0
     label.font = UIFont.boldSystemFontOfSize(16)
+    label.numberOfLines = 0
 
     return label
   }()
 
   lazy var subtitleLabel: UILabel = {
     let label = UILabel()
-    label.numberOfLines = 0
     label.font = UIFont.systemFontOfSize(14)
+    label.numberOfLines = 0
 
     return label
+  }()
+
+  lazy var separator: UIView = {
+    let view = UIView()
+    view.backgroundColor = UIColor.lightGrayColor()
+
+    return view
   }()
 
   override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
 
-    [avatarView, titleLabel, subtitleLabel].forEach {
+    [avatarView, titleLabel, subtitleLabel, separator].forEach {
       $0.translatesAutoresizingMaskIntoConstraints = false
       addSubview($0)
     }
@@ -77,13 +88,18 @@ class TableCell: UITableViewCell {
       avatarView.leftAnchor.constraintEqualToAnchor(leftAnchor, constant: Dimensions.Avatar.offset),
 
       titleLabel.topAnchor.constraintEqualToAnchor(topAnchor, constant: Dimensions.Text.offset),
-      titleLabel.rightAnchor.constraintLessThanOrEqualToAnchor(leftAnchor, constant: -Dimensions.Text.offset),
+      titleLabel.rightAnchor.constraintLessThanOrEqualToAnchor(rightAnchor, constant: -Dimensions.Text.offset),
       titleLabel.leftAnchor.constraintEqualToAnchor(avatarView.rightAnchor, constant: Dimensions.Text.offset),
 
-      subtitleLabel.topAnchor.constraintEqualToAnchor(titleLabel.bottomAnchor, constant: Dimensions.Text.offset),
-      subtitleLabel.rightAnchor.constraintLessThanOrEqualToAnchor(leftAnchor, constant: -Dimensions.Text.offset),
+      subtitleLabel.topAnchor.constraintEqualToAnchor(titleLabel.bottomAnchor, constant: Dimensions.Text.offset / 2),
+      subtitleLabel.rightAnchor.constraintLessThanOrEqualToAnchor(rightAnchor, constant: -Dimensions.Text.offset),
       subtitleLabel.leftAnchor.constraintEqualToAnchor(avatarView.rightAnchor, constant: Dimensions.Text.offset),
-      subtitleLabel.bottomAnchor.constraintEqualToAnchor(subtitleLabel.bottomAnchor, constant: -Dimensions.Text.offset)
+      subtitleLabel.bottomAnchor.constraintEqualToAnchor(separator.topAnchor, constant: -Dimensions.Text.offset),
+
+      separator.widthAnchor.constraintEqualToAnchor(widthAnchor),
+      separator.heightAnchor.constraintEqualToConstant(Dimensions.Separator.height),
+      separator.leftAnchor.constraintEqualToAnchor(leftAnchor),
+      separator.bottomAnchor.constraintEqualToAnchor(bottomAnchor)
       ])
   }
 }

@@ -19,7 +19,7 @@ class ViewController: UIViewController {
   func setupTableView() {
     tableView.translatesAutoresizingMaskIntoConstraints = false
     tableView.rowHeight = UITableViewAutomaticDimension
-    tableView.estimatedRowHeight = UITableViewAutomaticDimension
+    tableView.estimatedRowHeight = 100
     tableView.backgroundColor = UIColor.whiteColor()
     tableView.separatorStyle = .None
     tableView.delegate = self

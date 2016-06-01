@@ -33,7 +33,8 @@ public class StickyTable: UITableView {
 
     headerView.frame = CGRect(
       x: 0, y: -headerHeight, width: UIScreen.mainScreen().bounds.width, height: headerHeight)
-    contentOffset.y = headerHeight
+    contentInset.top = headerHeight
+    contentOffset.y = -headerHeight
   }
 }
 
