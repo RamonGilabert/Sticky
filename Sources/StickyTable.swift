@@ -4,7 +4,8 @@ public class StickyTable: UITableView {
 
   lazy var headerView: UIImageView = {
     let imageView = UIImageView()
-    imageView.contentMode = .ScaleAspectFit
+    imageView.contentMode = .ScaleAspectFill
+    imageView.clipsToBounds = true
 
     return imageView
   }()
@@ -13,8 +14,8 @@ public class StickyTable: UITableView {
 
   // MARK: - Initializers
 
-  public init(image: UIImage?, height: CGFloat = 220) {
-    super.init(frame: CGRectZero, style: .Grouped)
+  public init(image: UIImage?, height: CGFloat = 240) {
+    super.init(frame: CGRectZero, style: .Plain)
 
     headerView.image = image
     headerHeight = height

@@ -46,7 +46,7 @@ class TableCell: UITableViewCell {
 
   lazy var separator: UIView = {
     let view = UIView()
-    view.backgroundColor = UIColor.lightGrayColor()
+    view.backgroundColor = UIColor.init(red: 0.76, green: 0.76, blue: 0.76, alpha: 1)
 
     return view
   }()

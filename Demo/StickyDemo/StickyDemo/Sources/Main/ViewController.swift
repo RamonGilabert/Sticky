@@ -3,7 +3,7 @@ import Sticky
 
 class ViewController: UIViewController {
 
-  lazy var tableView: StickyTable = StickyTable(image: UIImage(named: "header-view"))
+  lazy var tableView: StickyTable = StickyTable(image: UIImage(named: "header-image"))
 
   override func viewDidLoad() {
     super.viewDidLoad()
