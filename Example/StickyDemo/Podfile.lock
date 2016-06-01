@@ -1,0 +1,16 @@
+PODS:
+  - Sticky (0.1.0)
+
+DEPENDENCIES:
+  - Sticky (from `../../`)
+
+EXTERNAL SOURCES:
+  Sticky:
+    :path: ../../
+
+SPEC CHECKSUMS:
+  Sticky: c31eccc3754602962b4bea3d730601358a53ed04
+
+PODFILE CHECKSUM: 5e35fc0997dc134d61a451b08d393b66f0905417
+
+COCOAPODS: 1.0.0
