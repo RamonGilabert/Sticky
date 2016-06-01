@@ -3,9 +3,23 @@ import Sticky
 
 class ViewController: UIViewController {
 
+  lazy var tableView: StickyTable = StickyTable()
+
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = UIColor.whiteColor()
+
+    setupTableView()
+  }
+
+  // MARK: - Setup
+
+  func setupTableView() {
+    
+  }
+
+  // MARK: - Constraints
+
+  func setupConstraints() {
+
   }
 }
-

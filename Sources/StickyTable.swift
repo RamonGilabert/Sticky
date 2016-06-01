@@ -37,6 +37,9 @@ public class StickyTable: UITableView {
   }
 }
 
-extension StickyTable: UIScrollView {
-  
+extension StickyTable {
+
+  func scrollViewDidScroll(scrollView: UIScrollView) {
+    print("Scrolling")
+  }
 }
