@@ -30,7 +30,11 @@ class TableCell: UITableViewCell {
   // MARK: - Configure
 
   func configureCell(viewModel: TableViewModel) {
+    avatarView.image = viewModel.image
+    titleLabel.text = viewModel.title
+    subtitleLabel.text = viewModel.subtitle
 
+    setupConstraints()
   }
 
   // MARK: - Setup constraints

@@ -8,17 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		03D5784A217D9F126A646C40 /* Pods_StickyDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9948F1C360636959D92F8F /* Pods_StickyDemo.framework */; };
-		293C7DB21CFEF56D0095C7CE /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C7DB11CFEF56D0095C7CE /* TableCell.swift */; };
-		293C7DB41CFEFC4F0095C7CE /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C7DB31CFEFC4F0095C7CE /* TableViewModel.swift */; };
+		293C7DC71CFEFFF80095C7CE /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C7DC31CFEFFF80095C7CE /* TableCell.swift */; };
+		293C7DC81CFEFFF80095C7CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C7DC41CFEFFF80095C7CE /* ViewController.swift */; };
+		293C7DC91CFEFFF80095C7CE /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293C7DC61CFEFFF80095C7CE /* TableViewModel.swift */; };
 		D5C7F74E1C3BC9CE008CDDBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F74C1C3BC9CE008CDDBA /* LaunchScreen.storyboard */; };
 		D5C7F75B1C3BCA1E008CDDBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5C7F7571C3BCA1E008CDDBA /* Assets.xcassets */; };
 		D5C7F75C1C3BCA1E008CDDBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C7F7591C3BCA1E008CDDBA /* AppDelegate.swift */; };
-		D5C7F75D1C3BCA1E008CDDBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C7F75A1C3BCA1E008CDDBA /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		293C7DB11CFEF56D0095C7CE /* TableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
-		293C7DB31CFEFC4F0095C7CE /* TableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		293C7DC31CFEFFF80095C7CE /* TableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		293C7DC41CFEFFF80095C7CE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		293C7DC61CFEFFF80095C7CE /* TableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 		3C33DFF0D73BE6A2EEDEE76C /* Pods-StickyDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-StickyDemo/Pods-StickyDemo.release.xcconfig"; sourceTree = "<group>"; };
 		6B9948F1C360636959D92F8F /* Pods_StickyDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StickyDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A714A80E66B4BBA22DE5F5A /* Pods-StickyDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StickyDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StickyDemo/Pods-StickyDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -27,7 +28,6 @@
 		D5C7F74F1C3BC9CE008CDDBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5C7F7571C3BCA1E008CDDBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5C7F7591C3BCA1E008CDDBA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D5C7F75A1C3BCA1E008CDDBA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +42,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		293C7DC11CFEFFF80095C7CE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				293C7DC41CFEFFF80095C7CE /* ViewController.swift */,
+				293C7DC21CFEFFF80095C7CE /* Cells */,
+				293C7DC51CFEFFF80095C7CE /* ViewModels */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		293C7DC21CFEFFF80095C7CE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				293C7DC31CFEFFF80095C7CE /* TableCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		293C7DC51CFEFFF80095C7CE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				293C7DC61CFEFFF80095C7CE /* TableViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		A46A9B3150C1F5F032A9DABA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,9 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				D5C7F7591C3BCA1E008CDDBA /* AppDelegate.swift */,
-				D5C7F75A1C3BCA1E008CDDBA /* ViewController.swift */,
-				293C7DB11CFEF56D0095C7CE /* TableCell.swift */,
-				293C7DB31CFEFC4F0095C7CE /* TableViewModel.swift */,
+				293C7DC11CFEFFF80095C7CE /* Main */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -236,10 +260,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				293C7DB21CFEF56D0095C7CE /* TableCell.swift in Sources */,
-				293C7DB41CFEFC4F0095C7CE /* TableViewModel.swift in Sources */,
-				D5C7F75D1C3BCA1E008CDDBA /* ViewController.swift in Sources */,
+				293C7DC81CFEFFF80095C7CE /* ViewController.swift in Sources */,
+				293C7DC71CFEFFF80095C7CE /* TableCell.swift in Sources */,
 				D5C7F75C1C3BCA1E008CDDBA /* AppDelegate.swift in Sources */,
+				293C7DC91CFEFFF80095C7CE /* TableViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +368,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StickyDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.gilabert.StickyDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -356,6 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StickyDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.gilabert.StickyDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
