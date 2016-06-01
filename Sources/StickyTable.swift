@@ -19,6 +19,7 @@ public class StickyTable: UITableView {
 
     headerView.image = image
     headerHeight = height
+    delegate = self
 
     setupTableView()
   }
@@ -37,11 +38,20 @@ public class StickyTable: UITableView {
     contentInset.top = headerHeight
     contentOffset.y = -headerHeight
   }
+
+  // MARK: - Sticky
+
+  public func stick() {
+    let offset: CGFloat = -contentOffset.y
+    
+    headerView.frame = CGRect(
+      x: 0, y: -offset, width: UIScreen.mainScreen().bounds.width, height: offset)
+  }
 }
 
-extension StickyTable {
+extension StickyTable: UITableViewDelegate {
 
-  func scrollViewDidScroll(scrollView: UIScrollView) {
-    print("Scrolling")
+  public func scrollViewDidScroll(scrollView: UIScrollView) {
+    stick()
   }
 }

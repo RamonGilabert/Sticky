@@ -39,12 +39,22 @@ class ViewController: UIViewController {
       tableView.widthAnchor.constraintEqualToAnchor(view.widthAnchor)
       ])
   }
+
+  // MARK: - Helper methods
+
+  override func preferredStatusBarStyle() -> UIStatusBarStyle {
+    return .LightContent
+  }
 }
 
 extension ViewController: UITableViewDelegate {
 
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     return UITableViewAutomaticDimension
+  }
+
+  func scrollViewDidScroll(scrollView: UIScrollView) {
+    tableView.stick()
   }
 }
 
