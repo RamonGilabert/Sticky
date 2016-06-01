@@ -20,8 +20,13 @@ class ViewController: UIViewController {
     tableView.translatesAutoresizingMaskIntoConstraints = false
     tableView.rowHeight = UITableViewAutomaticDimension
     tableView.estimatedRowHeight = UITableViewAutomaticDimension
+    tableView.backgroundColor = UIColor.whiteColor()
+    tableView.separatorStyle = .None
     tableView.delegate = self
     tableView.dataSource = self
+
+    tableView.registerClass(
+      TableCell.self, forCellReuseIdentifier: TableCell.reusableIdentifier)
   }
 
   // MARK: - Constraints
@@ -46,10 +51,15 @@ extension ViewController: UITableViewDelegate {
 extension ViewController: UITableViewDataSource {
 
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 10
+    return TableViewModel.cells.count
   }
 
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    return nil
+    guard let cell = tableView.dequeueReusableCellWithIdentifier(TableCell.reusableIdentifier)
+      as? TableCell else { return UITableViewCell() }
+
+    cell.configureCell(TableViewModel.cells[indexPath.row])
+
+    return cell
   }
 }
