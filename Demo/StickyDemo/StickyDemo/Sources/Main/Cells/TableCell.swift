@@ -40,6 +40,6 @@ class TableCell: UITableViewCell {
   // MARK: - Setup constraints
 
   func setupConstraints() {
-
+    
   }
 }
